@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4a13e3-c941-4038-96f8-5391b5081768" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Message.vue" afterPath="$PROJECT_DIR$/src/components/Message.vue" />
     </list>
@@ -41,12 +40,13 @@
       <file leaf-file-name="Message.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Message.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+            <state relative-caret-position="378">
+              <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1346#1367#0" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1394#1415#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,6 +119,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>50</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -319,12 +324,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502701202146</updated>
       <workItem from="1502701203307" duration="9402000" />
-      <workItem from="1502728533685" duration="6929000" />
+      <workItem from="1502728533685" duration="7410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16331000" />
+    <option name="totallyTimeSpent" value="16812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -444,7 +449,8 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1346#1367#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1394#1415#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -540,12 +546,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Message.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+        <state relative-caret-position="378">
+          <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1346#1367#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1394#1415#0" expanded="true" />
           </folding>
         </state>
       </provider>

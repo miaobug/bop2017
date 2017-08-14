@@ -25,6 +25,7 @@
       <div id="sendPhoto" @click="sendPhoto"><img src="../assets/img.png" alt=""><input name="img" type="file" accept="image/*;" id="upload" style="width: 50px; height: 50px; left: 0; top: 0; opacity: 0; position: absolute;"></div>
       <input v-model="message" type="text" @keyup.enter="sendMsg">
       <div id="sendBtn" @click="sendMsg"><img width="40" height="40" src="../assets/send.png" alt=""></div>
+      <div class="" style="clear: both;"></div>
     </div>
   </div>
 </template>
@@ -58,8 +59,8 @@ export default {
     this.id = this.$route.params.id;
     this.loadMsg();
     const height = document.documentElement.clientHeight;
-    document.getElementById('messageContainer').style.height = (height - 100) + 'px';
-    document.getElementById('messageWrapper').style.height = (height - 100) + 'px';
+    document.getElementById('messageContainer').style.height = (height - 102) + 'px';
+    document.getElementById('messageWrapper').style.height = (height - 102) + 'px';
     this.containerHeight = height - 100;
     this.$nextTick(() => {
       document.getElementById('messageContainer').scrollTop = document.getElementById('messageWrapper').scrollHeight - this.containerHeight
@@ -158,6 +159,7 @@ export default {
   }
   #messageBar {
     border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
     width: 100%;
     height: 50px;
     padding: 0;
@@ -173,12 +175,14 @@ export default {
   }
   #messageBar input {
     float: left;
-    height: 48px;
+    height: 49px;
     font-size: 1.5rem;
     padding: 0 0.5rem;
     border: none;
     border-left: 1px solid #a3a3a3;
     border-right: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+    margin: 0;
     width: 70%;
   }
   #sendBtn {
