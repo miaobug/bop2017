@@ -22,6 +22,7 @@
       </div>
     </div>
     <div id="messageBar">
+      <div id="sendPhoto" @click="sendPhoto"><img src="../assets/img.png" alt=""><input name="img" type="file" accept="image/*;" id="upload" style="width: 50px; height: 50px; left: 0; top: 0; opacity: 0; position: absolute;"></div>
       <input v-model="message" type="text" @keyup.enter="sendMsg">
       <div id="sendBtn" @click="sendMsg"><img width="40" height="40" src="../assets/send.png" alt=""></div>
     </div>
@@ -29,10 +30,28 @@
 </template>
 
 <script>
+
   import Vue from 'vue'
   import axios from 'axios'
   import localStorage from 'vue-localstorage'
   Vue.use(localStorage)
+
+  function uploadFile(file){
+    var url = '/api/faceRecog';
+    var xhr = new XMLHttpRequest();
+    var fd = new FormData();
+    xhr.open("POST", url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // Every thing ok, file uploaded
+        const name = xhr.responseText; // handle response.
+        window.open('/message/' + name, '_self');
+      }
+    };
+    fd.append("img", file);
+    xhr.send(fd);
+  }
+
 export default {
   name: 'hello',
   mounted () {
@@ -45,8 +64,20 @@ export default {
     this.$nextTick(() => {
       document.getElementById('messageContainer').scrollTop = document.getElementById('messageWrapper').scrollHeight - this.containerHeight
     });
+    document.getElementById('upload').addEventListener('change', function(){
+      let file = this.files[0];
+      // This code is only for demo ...
+      uploadFile(file);
+      console.log("name : " + file.name);
+      console.log("size : " + file.size);
+      console.log("type : " + file.type);
+      console.log("date : " + file.lastModified);
+    }, false);
   },
   methods: {
+    sendPhoto: function () {
+
+    },
     sendMsg: function () {
 //      console.log(this.messages);
       if (this.message.length > 0) {
@@ -131,14 +162,24 @@ export default {
     height: 50px;
     padding: 0;
   }
+  #messageBar {
+
+  }
+  #sendPhoto {
+    position: relative;
+    float: left;
+    width: 15%;
+    padding: 7px 11px;
+  }
   #messageBar input {
     float: left;
     height: 48px;
     font-size: 1.5rem;
     padding: 0 0.5rem;
     border: none;
+    border-left: 1px solid #a3a3a3;
     border-right: 1px solid #a3a3a3;
-    width: 85%;
+    width: 70%;
   }
   #sendBtn {
     padding: 5px;

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4a13e3-c941-4038-96f8-5391b5081768" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Message.vue" afterPath="$PROJECT_DIR$/src/components/Message.vue" />
     </list>
@@ -41,11 +41,12 @@
       <file leaf-file-name="Message.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Message.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="319">
+              <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1113#1134#0" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1346#1367#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,18 +109,10 @@
       <file leaf-file-name="Login.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="482">
+              <caret line="48" column="14" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <marker date="1502734308000" expanded="true" signature="1896:1994" ph="{...}" />
-                <marker date="1502734308000" expanded="true" signature="1896:1999" ph="{...}" />
-                <marker date="1502734308000" expanded="true" signature="1896:2037" ph="{&quot;name&quot;: 'hello'...}" />
-                <marker date="1502734308000" expanded="true" signature="1896:2051" ph="..." />
-                <marker date="1502734308000" expanded="true" signature="2011:2035" ph="{...}" />
-                <marker date="1502734308000" expanded="true" signature="2024:2031" ph="{...}" />
-                <marker date="1502734308000" expanded="true" signature="2135:2915" ph="..." />
-                <marker date="1502734308000" expanded="true" signature="2150:2257" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -178,6 +171,22 @@
             <path>
               <item name="bop2017" type="b2602c69:ProjectViewProjectNode" />
               <item name="bop2017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bop2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bop2017" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bop2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bop2017" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bop2017" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bop2017" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,12 +319,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502701202146</updated>
       <workItem from="1502701203307" duration="9402000" />
-      <workItem from="1502728533685" duration="6016000" />
+      <workItem from="1502728533685" duration="6929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15418000" />
+    <option name="totallyTimeSpent" value="16331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -424,14 +433,6 @@
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <marker date="1502734308000" expanded="true" signature="1896:1994" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:1999" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:2037" ph="{&quot;name&quot;: 'hello'...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:2051" ph="..." />
-            <marker date="1502734308000" expanded="true" signature="2011:2035" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="2024:2031" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="2135:2915" ph="..." />
-            <marker date="1502734308000" expanded="true" signature="2150:2257" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -442,7 +443,8 @@
           <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1113#1134#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1346#1367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -478,24 +480,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#140#161#0" expanded="true" />
             <element signature="e#303#332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <marker date="1502734308000" expanded="true" signature="1896:1994" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:1999" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:2037" ph="{&quot;name&quot;: 'hello'...}" />
-            <marker date="1502734308000" expanded="true" signature="1896:2051" ph="..." />
-            <marker date="1502734308000" expanded="true" signature="2011:2035" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="2024:2031" ph="{...}" />
-            <marker date="1502734308000" expanded="true" signature="2135:2915" ph="..." />
-            <marker date="1502734308000" expanded="true" signature="2150:2257" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -544,13 +528,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="48" column="14" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Message.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="319">
+          <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1113#1134#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1346#1367#0" expanded="true" />
           </folding>
         </state>
       </provider>
