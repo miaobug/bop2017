@@ -217,17 +217,17 @@ def faceRecog():
         return json.dumps(res, ensure_ascii=False)
 
 
-@app.route('/sceneRecog')
+@app.route('/sceneRecog', methods=["POST"])
 def sceneRecog():
     file = request.files["img"]
     if file.filename == '':
         r = {'status': -1, 'failReason': "文件没有成功上传"}
         return Response(response=json.dumps(r), mimetype="text/html")
     else:
-        # filename = str(time.time()) + file.filename
-        # path = os.path.join("./server/scene", filename)
-        # file.save(path)
-        path = os.path.join("./server/scene", "20151225102523748.gif")
+        filename = str(time.time()) + file.filename
+        path = os.path.join("./server/scene", filename)
+        file.save(path)
+        # path = os.path.join("./server/scene", "20151225102523748.gif")
         res = sift_withoutcv.get_intros(path)
         print res
         return res
