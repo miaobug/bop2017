@@ -22,8 +22,7 @@ def compute_similarity (vecs1, vecs2, accept_rate = 0.4):
             match_count +=1
     return match_count
 
-if __name__ == "__main__":
-    img = sys.argv[1]
+def get_intros(img):
     image = mh.imread(img,as_grey=True)
     query_features = surf.surf(image,max_points=max_features)
     best_match = ''
@@ -40,4 +39,8 @@ if __name__ == "__main__":
             print(temp_similarity)
     print('best match filename '+best_match)
     f = open('intros/'+best_match.split('.')[0] + '.txt')
-    print f.read()
+    return f.read()
+
+if __name__ == "__main__":
+    img = sys.argv[1]
+    print get_intros(img)

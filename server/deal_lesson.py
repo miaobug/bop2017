@@ -31,16 +31,33 @@ def init():
             lesson['info2'] = paras[10]
         except Exception, e:
             lesson['info2'] = ''
-        lesson['place'] = lesson['info1'] + lesson['info2']
+        lesson['place'] = lesson['info1'] + '\t' + lesson['info2']
         data.append(lesson)
     return data
 
-def get_one_lesson(lesson_name):
+def get_lessons(lesson_name):
     data = init()
     res = []
     for k in data:
         if lesson_name in k['name']:
             res.append(k)
+    return res
+
+def get_one_lesson(lesson_list, teacher):
+    for lesson in lesson_list:
+        if teacher in lesson['teacher']:
+            return lesson
+    return -1
+
+def get_lesson_list(time='周二'):
+    data = init()
+    res = []
+    for lesson in data:
+        if time in lesson['place']:
+            res.append(lesson)
+    for k in res:
+        for t in k:
+            print t,k[t]
     return res
 
 if __name__ == '__main__':

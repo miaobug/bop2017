@@ -3,7 +3,7 @@ from flask import Flask
 from flask import render_template, request, Response
 import json, time, os
 import azure, re
-import deal_lesson
+import deal_lesson, deal_classroom, sift_withoutcv
 
 app = Flask(__name__)
 g = {
@@ -15,7 +15,9 @@ g = {
                 "吃": [1],
                 "地铁": [3],
                 "公交": [4],
+                "今天.*?课": [10],
                 "上(.*?)课": [5],
+                "自习": [8],
                 "else": [0, "什么? 我不明白, 试试换个问题"]
             },
             "answer": "好的"
@@ -53,15 +55,17 @@ g = {
             },
             "answer": "北京大学东南门、南门、小西门门口均有公交站, 请问您要去哪个门的公交站?",
         },
-        5: {
+        # 5: {
+        # },
+        # 6: {
+        # },
+        # 7: {
+        # }
+        8: {
+            "answer": "请问您想去哪栋教学楼上自习呢?"
         },
-        6: {
-        },
-        7: {
-            "transfer": {
-
-            },
-            "answer": "需要给您导航吗?"
+        10: {
+            "answer": ""
         }
     }
 }
@@ -70,6 +74,48 @@ g = {
 @app.route('/query/<question>')
 def query(question):
     state = g.get("state")
+    if state == 6:
+        teacher = question
+        classObj = deal_lesson.get_one_lesson(g.get("classes"), teacher)
+        g["state"] = 7
+        info = classObj.get("place")
+        places = deal_classroom.get_all_buildings() #todo
+        for place in places:
+            if info.find(place) != -1:
+                g["place"] = place
+        return json.dumps({
+            "direction": "answer",
+            "param": "您想上的课程在" + info.decode("utf8") + ", 需要为您导航吗?"
+        }, ensure_ascii=False)
+    if state == 7:
+        g["state"] = 0
+        return json.dumps({
+            "direction": "navigate",
+            "param": g.get("place")
+        }, ensure_ascii=False)
+    if state == 8:
+
+        if question not in deal_classroom.get_all_buildings():
+            g["state"] = 0
+            return json.dumps({
+                "direction": "answer",
+                "param": "不存在这个教学楼哦"
+            }, ensure_ascii=False)
+
+        g["state"] = 9
+        g["place"] = question
+        rooms = deal_classroom.get_empty_rooms(question) #todo
+        return json.dumps({
+            "direction": "navigate",
+            "param": "今天" + question + "空闲的教室有" + "、".join(rooms) + ", 需要为您导航吗"
+        }, ensure_ascii=False)
+    if state == 9:
+        g["state"] = 0
+        return json.dumps({
+            "direction": "navigate",
+            "param": g["place"]
+        }, ensure_ascii=False)
+
     transfer = g.get("stateMachine")[state]["transfer"]
     for q, answer in transfer.items():
         m = re.search(q.decode("utf8"), question)
@@ -86,7 +132,7 @@ def query(question):
                 }, ensure_ascii=False)
             elif g.get("state") == 5:
                 className = m.group(1)
-                classes = deal_lesson.get_one_lesson(className)
+                classes = deal_lesson.get_lessons(className)
                 if classes.__len__() == 1:
                     g["state"] = 7
                     classObj = classes[0]
@@ -94,12 +140,34 @@ def query(question):
                         "direction": "answer",
                         "param": "您想上的课程在" + "、".join(classObj.get("place")) + ", 需要为您导航吗?"
                     }, ensure_ascii=False)
-                else:
-                    g["state"] = 7
+                elif classes.__len__() > 1:
+                    g["state"] = 6
+                    g["classes"] = classes
                     return json.dumps({
                         "direction": "answer",
-                        "param": "您想上的课程有多个老师的老师开设:" + "、".join(map(lambda x: x["teacher"], classes)) + ", 想要上哪个老师的课?"
+                        "param": "您想上的课程有多个老师开设:" + "、".join(map(lambda x: x["teacher"], classes)) + ", 想要上哪个老师的课?"
                     }, ensure_ascii=False)
+                else:
+                    g["state"] = 0
+                    return json.dumps({
+                        "direction": "answer",
+                        "param": "查不到您要上的课程耶"
+                    }, ensure_ascii=False)
+            elif g.get("state") == 10:
+                g["state"] = 0
+                classes = deal_lesson.get_lesson_list()
+                if not classes:
+                    return json.dumps({
+                        "direction": "answer",
+                        "param": "您今天没有课"
+                    })
+                res = []
+                for k in classes:
+                    res.append(k['name'])
+                return json.dumps({
+                    "direction": "answer",
+                    "param": "您今天有" + "、".join(res).decode("utf8") + "等课程"
+                })
             elif state == g["state"]:
                 return json.dumps({
                     "direction": "answer",
@@ -134,7 +202,7 @@ def query(question):
 
 
 
-@app.route('/faceRecog', methods=['POST'])
+@app.route('/faceRecog', methods=["POST"])
 def faceRecog():
     file = request.files["img"]
     if file.filename == '':
@@ -145,7 +213,23 @@ def faceRecog():
         path = os.path.join("./server/identity", filename)
         file.save(path)
         res = azure.get_user_info(path)
-        # return json.dumps(res, ensure_ascii=False)
+
+        return json.dumps(res, ensure_ascii=False)
+
+
+@app.route('/sceneRecog')
+def sceneRecog():
+    file = request.files["img"]
+    if file.filename == '':
+        r = {'status': -1, 'failReason': "文件没有成功上传"}
+        return Response(response=json.dumps(r), mimetype="text/html")
+    else:
+        # filename = str(time.time()) + file.filename
+        # path = os.path.join("./server/scene", filename)
+        # file.save(path)
+        path = os.path.join("./server/scene", "20151225102523748.gif")
+        res = sift_withoutcv.get_intros(path)
+        print res
         return res
 
 

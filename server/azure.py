@@ -4,7 +4,10 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 import cognitive_face as CF
 
-
+KEY = 'ed496164086047439ddbe7c54e5920a0'  # Replace with a valid Subscription Key here.
+CF.Key.set(KEY)
+BASE_URL = 'https://westus.api.cognitive.microsoft.com/face/v1.0/'  # Replace with your regional Base URL
+CF.BaseUrl.set(BASE_URL)
 
 #result = CF.face.detect(img_url,landmarks=True,attributes='age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise');
 #result = CF.person.create('1','miaorui')
@@ -19,17 +22,13 @@ id = {
 
 def get_user_info(file_name):
     try:
-        KEY = 'ed496164086047439ddbe7c54e5920a0'  # Replace with a valid Subscription Key here.
-        CF.Key.set(KEY)
-        BASE_URL = 'https://westus.api.cognitive.microsoft.com/face/v1.0/'  # Replace with your regional Base URL
-        CF.BaseUrl.set(BASE_URL)
-        data = open(file_name,'r')
+        data = open(file_name)
         img_result = CF.face.detect(data)[0]
         user_id = img_result.get('faceId')
         user_result = CF.face.identify([user_id],'1')[0]
         user = user_result['candidates'][0]['personId']
         return id[user]
-    except Exception,e:
+    except Exception, e:
         return -1
 
 if __name__ == '__main__' :
