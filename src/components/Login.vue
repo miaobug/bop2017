@@ -3,27 +3,59 @@
     <img class="logo" src="../assets/logo.png" id="logo">
     <h1>观一塔湖图 · 知燕园万事</h1>
     <Button style="position: relative; top: -36px; width: 120px; background-color: darkred; font-size: 20px; color: white; opacity: 0">刷脸登录</Button>
-    <form id="form1" action="" style="position: relative; left: 0px; top: -80px;" v-on:submit.prevent="alert('submit')" method="post" action="/">
-      <input name="img" type="file" accept="image/*;" id="upload" style="width: 220px; height: 80px; opacity: 0" @change="submit">
+    <form enctype="multipart/form-data" id="form1" action="/api/faceRecog" style="position: relative; left: 0px; top: -80px;" method="post">
+      <input name="img" type="file" accept="image/*;" id="upload" style="width: 220px; height: 80px; opacity: 0">
     </form>
+
+    <!--<input name="img" type="file" accept="image/*;" id="upload" style="width: 220px; height: 80px; opacity: 0" @change="submitt">-->
+
   </div>
 </template>
 
 <script>
+
+
+
+  function uploadFile(file){
+    var url = '/apii/faceRecog';
+    var xhr = new XMLHttpRequest();
+    var fd = new FormData();
+    xhr.open("POST", url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // Every thing ok, file uploaded
+        const name = xhr.responseText; // handle response.
+        window.open('/message/' + name, '_self');
+      }
+    };
+    fd.append("img", file);
+    xhr.send(fd);
+  }
+
 export default {
   name: 'hello',
   mounted () {
     const height = document.documentElement.clientHeight;
     document.getElementById('container').style.height = (height - 0) + 'px';
+
+    document.getElementById('upload').addEventListener('change', function(){
+      var file = this.files[0];
+      // This code is only for demo ...
+      uploadFile(file);
+      console.log("name : " + file.name);
+      console.log("size : " + file.size);
+      console.log("type : " + file.type);
+      console.log("date : " + file.lastModified);
+    }, false);
   },
   methods: {
     upload() {
       console.log('click upload');
       document.getElementById('upload').click();
     },
-    submit() {
+    submitt() {
 //      console.log(12);
-      window.open('www.baidu.com', '_self')
+//      window.open('www.baidu.com', '_self')
       document.getElementById('form1').submit();
     },
   },
