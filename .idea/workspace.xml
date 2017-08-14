@@ -2,87 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b46b22dc-b751-4f81-88fe-01f592c1c2ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1502728729.37goose.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1502728806.24goose.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502728806.24goose.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729012.45goose.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729158.39goose.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729496.111111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729605.831111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729663.891111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502729990.811111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730090.741111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730156.041111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730330.961111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730387.721111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730439.091111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730551.111111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730694.441111111.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/identity/1502730874.65image.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/博雅塔.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/图书馆.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/塞万提斯像.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/未名湖.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/西门.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/imgs/邱德拔体育馆.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/test.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/azure.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/deal_lesson.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/博雅塔.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/图书馆.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/塞万提斯像.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/未名湖.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/西门.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/intros/邱德拔体育馆.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/lesson.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/lesson_2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/sift_withoutcv.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/templates/gdmap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/templates/map.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/一教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/三教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/二教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/哲学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/四教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/国关.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/地学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/政管.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/文史.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/理教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/电教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/third/电教听力.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/一教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/三教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/二教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/哲学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/四教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/国关.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/地学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/政管.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/文史.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/理教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/电教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/today/电教听力.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/一教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/三教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/二教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/哲学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/四教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/国关.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/地学.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/政管.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/文史.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/理教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/电教.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/tomorrow/电教听力.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Map.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/index.js" afterPath="$PROJECT_DIR$/config/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Login.vue" afterPath="$PROJECT_DIR$/src/components/Login.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Map.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="591">
               <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding />
             </state>
@@ -149,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="42">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -176,8 +97,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -225,9 +146,9 @@
         <option value="$PROJECT_DIR$/server/templates/map.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Login.vue" />
-        <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/src/components/Map.vue" />
+        <option value="$PROJECT_DIR$/config/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Login.vue" />
       </list>
     </option>
   </component>
@@ -468,12 +389,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502701202146</updated>
-      <workItem from="1502701203307" duration="16479000" />
+      <workItem from="1502701203307" duration="16985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16479000" />
+    <option name="totallyTimeSpent" value="16985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -608,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -634,18 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
@@ -654,10 +555,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="591">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -670,11 +579,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Map.vue">
+    <entry file="file://$PROJECT_DIR$/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        <state relative-caret-position="240">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#Button#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

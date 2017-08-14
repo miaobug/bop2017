@@ -17,7 +17,7 @@
 
 
   function uploadFile(file){
-    var url = '/apii/faceRecog';
+    var url = '/api/faceRecog';
     var xhr = new XMLHttpRequest();
     var fd = new FormData();
     xhr.open("POST", url, true);
