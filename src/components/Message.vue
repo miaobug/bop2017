@@ -38,7 +38,7 @@
   Vue.use(localStorage)
 
   function uploadFile(file){
-    var url = '/api/faceRecog';
+    var url = '/api/sceneRecog';
     var xhr = new XMLHttpRequest();
     var fd = new FormData();
     xhr.open("POST", url, true);
