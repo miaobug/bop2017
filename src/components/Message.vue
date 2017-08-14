@@ -11,7 +11,10 @@
       <div id="messageContainer">
         <div id="messageWrapper">
           <div v-for="item in messages">
-            <div class="msg bot-msg" v-if="item.from === 'bot'">{{item.content}}</div>
+            <div class="msg bot-msg" v-if="item.from === 'bot'">
+              <div v-if="item.type === 'msg'">{{item.content}}</div>
+              <div v-else @click="startNav(item)">{{item.content}}</div>
+            </div>
             <div class="msg user-msg" v-if="item.from === 'user'">{{item.content}}</div>
             <div style="clear: both;"></div>
           </div>
@@ -69,7 +72,8 @@ export default {
             this.messages.push({
               content: '点击前往' + response.data.param,
               from: 'bot',
-              type: 'nav'
+              type: 'nav',
+              param: response.data.param
             });
           }
           this.message = '';
@@ -85,6 +89,10 @@ export default {
         this.messages = JSON.parse(tmp)
         console.log(this.messages)
       }
+    },
+    startNav: function (item) {
+//      勺园 博雅塔 未名湖 百周年纪念讲堂 北京大学图书馆 邱德拔体育馆 燕南园-38号楼
+      this.$router.push({path: `/map/${this.id}/北京大学图书馆/${item.param}`})
     }
   },
   data () {
