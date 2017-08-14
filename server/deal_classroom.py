@@ -19,7 +19,7 @@ def init():
     dir_names = ['today','third','tomorrow']
     for dir_name in dir_names:
         temp_dir = {}
-        for parent, dirnames, filenames in os.walk(dir_name):
+        for parent, dirnames, filenames in os.walk('./server' + dir_name):
             for filename in filenames:
                 temp_file = {}
                 with open(dir_name + '/' + filename, 'r') as f:

@@ -1,3 +1,8 @@
+#coding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 import mahotas as mh
 from mahotas.features import surf
 import numpy as np
@@ -27,7 +32,7 @@ def get_intros(img):
     query_features = surf.surf(image,max_points=max_features)
     best_match = ''
     similarity = 0.0
-    for parent, dirnames, filenames in os.walk('imgs/'):
+    for parent, dirnames, filenames in os.walk('./server/imgs/'):
         for filename in filenames:
             image = mh.imread(os.path.join(parent, filename),as_grey=True)
             sample_features = surf.surf(image,max_points=max_features)
@@ -35,11 +40,15 @@ def get_intros(img):
             if temp_similarity>similarity:
                 best_match = filename
                 similarity = temp_similarity
-            print(filename)
-            print(temp_similarity)
-    print('best match filename '+best_match)
-    f = open('intros/'+best_match.split('.')[0] + '.txt')
-    return f.read()
+    if best_match != '':
+        print('best match filename '+best_match)
+        f = open('./server/intros/'+best_match.split('.')[0] + '.txt')
+        # print f.read()
+        return f.read()
+    else:
+        res = '您的图片未找到'
+        print res
+        return res
 
 if __name__ == "__main__":
     img = sys.argv[1]

@@ -8,7 +8,7 @@ import copy
 import re
 
 def init():
-    file = open('lesson_2.txt', 'r')
+    file = open('./server/lesson_2.txt', 'r')
     data = []
     while 1:
         line = file.readline().strip()
@@ -21,17 +21,20 @@ def init():
         lesson['type'] = paras[2]
         lesson['score'] = paras[3]
         lesson['teacher'] = paras[4]
+        places = []
         if not lesson['teacher'].strip():
             continue
         try:
             lesson['info1'] = paras[9]
+            places.append(lesson['info1'])
         except Exception, e:
             lesson['info1'] = ''
         try:
             lesson['info2'] = paras[10]
+            places.append(lesson['info2'])
         except Exception, e:
             lesson['info2'] = ''
-        lesson['place'] = lesson['info1'] + '\t' + lesson['info2']
+        lesson['place'] = "\t".join(places)
         data.append(lesson)
     return data
 
@@ -61,7 +64,7 @@ def get_lesson_list(time='周二'):
     return res
 
 if __name__ == '__main__':
-    file = open('lesson_2.txt', 'r')
+    file = open('./server/lesson_2.txt', 'r')
     data = []
     while 1:
         line = file.readline().strip()

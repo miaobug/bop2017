@@ -64,9 +64,6 @@ g = {
         8: {
             "answer": "请问您想去哪栋教学楼上自习呢?"
         },
-        10: {
-            "answer": ""
-        }
     }
 }
 
@@ -94,7 +91,6 @@ def query(question):
             "param": g.get("place")
         }, ensure_ascii=False)
     if state == 8:
-
         if question not in deal_classroom.get_all_buildings():
             g["state"] = 0
             return json.dumps({
@@ -136,9 +132,14 @@ def query(question):
                 if classes.__len__() == 1:
                     g["state"] = 7
                     classObj = classes[0]
+                    info = classObj.get("place").decode("utf8")
+                    places = deal_classroom.get_all_buildings()  # todo
+                    for place in places:
+                        if info.find(place) != -1:
+                            g["place"] = place
                     return json.dumps({
                         "direction": "answer",
-                        "param": "您想上的课程在" + "、".join(classObj.get("place")) + ", 需要为您导航吗?"
+                        "param": "您想上的课程在" + info + ", 需要为您导航吗?"
                     }, ensure_ascii=False)
                 elif classes.__len__() > 1:
                     g["state"] = 6
@@ -167,7 +168,7 @@ def query(question):
                 return json.dumps({
                     "direction": "answer",
                     "param": "您今天有" + "、".join(res).decode("utf8") + "等课程"
-                })
+                }, ensure_ascii=False)
             elif state == g["state"]:
                 return json.dumps({
                     "direction": "answer",

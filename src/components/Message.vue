@@ -25,6 +25,7 @@
       <div id="sendPhoto" @click="sendPhoto"><img src="../assets/img.png" alt=""><input name="img" type="file" accept="image/*;" id="upload" style="width: 50px; height: 50px; left: 0; top: 0; opacity: 0; position: absolute;"></div>
       <input v-model="message" type="text" @keyup.enter="sendMsg">
       <div id="sendBtn" @click="sendMsg"><img width="40" height="40" src="../assets/send.png" alt=""></div>
+      <div class="" style="clear: both;"></div>
     </div>
   </div>
 </template>
@@ -36,21 +37,22 @@
   import localStorage from 'vue-localstorage'
   Vue.use(localStorage)
 
-  function uploadFile(file){
-    var url = '/api/faceRecog';
-    var xhr = new XMLHttpRequest();
-    var fd = new FormData();
-    xhr.open("POST", url, true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        // Every thing ok, file uploaded
-        const name = xhr.responseText; // handle response.
-        window.open('/message/' + name, '_self');
-      }
-    };
-    fd.append("img", file);
-    xhr.send(fd);
-  }
+//  function uploadFile(file){
+//    var url = '/api/sceneRecog';
+//    var xhr = new XMLHttpRequest();
+//    var fd = new FormData();
+//    xhr.open("POST", url, true);
+//    xhr.onreadystatechange = function() {
+//      if (xhr.readyState == 4 && xhr.status == 200) {
+//        // Every thing ok, file uploaded
+//        const name = xhr.responseText; // handle response.
+////        window.open('/message/' + name, '_self');
+//
+//      }
+//    };
+//    fd.append("img", file);
+//    xhr.send(fd);
+//  }
 
 export default {
   name: 'hello',
@@ -58,23 +60,59 @@ export default {
     this.id = this.$route.params.id;
     this.loadMsg();
     const height = document.documentElement.clientHeight;
-    document.getElementById('messageContainer').style.height = (height - 100) + 'px';
-    document.getElementById('messageWrapper').style.height = (height - 100) + 'px';
+    document.getElementById('messageContainer').style.height = (height - 102) + 'px';
+    document.getElementById('messageWrapper').style.height = (height - 102) + 'px';
     this.containerHeight = height - 100;
     this.$nextTick(() => {
       document.getElementById('messageContainer').scrollTop = document.getElementById('messageWrapper').scrollHeight - this.containerHeight
     });
+    const that = this;
     document.getElementById('upload').addEventListener('change', function(){
       let file = this.files[0];
       // This code is only for demo ...
-      uploadFile(file);
+      that.uploadFile(file);
       console.log("name : " + file.name);
       console.log("size : " + file.size);
       console.log("type : " + file.type);
       console.log("date : " + file.lastModified);
     }, false);
+
+    const id = this.$route.params.id;
+    if(id != -1) {
+      this.messages.push({
+        content: '你好,' + id,
+        from: 'bot',
+        type: 'msg'
+      });
+
+      this.$localStorage.set('msg' + this.id, JSON.stringify(this.messages));
+    }
   },
   methods: {
+    uploadFile(file){
+      var url = '/api/sceneRecog';
+      var xhr = new XMLHttpRequest();
+      var fd = new FormData();
+      xhr.open("POST", url, true);
+      const that = this;
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          // Every thing ok, file uploaded
+          const name = xhr.responseText; // handle response.
+//        window.open('/message/' + name, '_self');
+          console.log(name);
+          that.messages.push({
+            content: name,
+            from: 'bot',
+            type: 'msg'
+          });
+
+          that.$localStorage.set('msg' + this.id, JSON.stringify(this.messages));
+        }
+      };
+      fd.append("img", file);
+      xhr.send(fd);
+    },
     sendPhoto: function () {
 
     },
@@ -158,6 +196,7 @@ export default {
   }
   #messageBar {
     border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
     width: 100%;
     height: 50px;
     padding: 0;
@@ -173,12 +212,14 @@ export default {
   }
   #messageBar input {
     float: left;
-    height: 48px;
+    height: 49px;
     font-size: 1.5rem;
     padding: 0 0.5rem;
     border: none;
     border-left: 1px solid #a3a3a3;
     border-right: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+    margin: 0;
     width: 70%;
   }
   #sendBtn {
